@@ -107,12 +107,12 @@ HTTPS 证书：/etc/letsencrypt/live/data-365.cn/
 
 ```bash
 cd /var/www/data-365.cn
-sudo git pull --ff-only
+git pull --ff-only
 sudo nginx -t
 sudo systemctl reload nginx
 ```
 
-如果服务器使用 deploy key 或 SSH alias，按服务器已有 SSH 配置执行 `git pull`。不要把私钥、密码、Token 写进仓库。
+线上目录由 `ubuntu` 用户维护，Nginx 只读取静态文件。不要把私钥、密码、Token 写进仓库。
 
 ## 线上验证
 

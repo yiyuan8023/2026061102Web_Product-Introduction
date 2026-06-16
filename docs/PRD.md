@@ -145,7 +145,7 @@
 
 ```bash
 cd /var/www/data-365.cn
-sudo git pull --ff-only
+git pull --ff-only
 sudo nginx -t
 sudo systemctl reload nginx
 ```
