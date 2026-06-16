@@ -124,6 +124,7 @@
 部署要求：
 
 - 源码托管在 GitHub：`git@github.com:yiyuan8023/2026061102Web_Product-Introduction.git`。
+- 服务器拉取地址：`https://github.com/yiyuan8023/2026061102Web_Product-Introduction.git`。
 - 服务器目录：`/var/www/data-365.cn`。
 - Nginx 配置：`/etc/nginx/sites-available/data-365`。
 - 服务器通过 GitHub 拉取代码更新。

@@ -77,7 +77,8 @@ http://localhost:5178/
 远端仓库：
 
 ```text
-git@github.com:yiyuan8023/2026061102Web_Product-Introduction.git
+本地推送：git@github.com:yiyuan8023/2026061102Web_Product-Introduction.git
+服务器拉取：https://github.com/yiyuan8023/2026061102Web_Product-Introduction.git
 ```
 
 本地提交并推送：
@@ -103,7 +104,7 @@ Nginx 配置：/etc/nginx/sites-available/data-365
 HTTPS 证书：/etc/letsencrypt/live/data-365.cn/
 ```
 
-服务器从 GitHub 拉代码。更新线上站点时，在服务器执行：
+服务器从 GitHub 通过 HTTPS 拉代码。更新线上站点时，在服务器执行：
 
 ```bash
 cd /var/www/data-365.cn
@@ -112,7 +113,7 @@ sudo nginx -t
 sudo systemctl reload nginx
 ```
 
-线上目录由 `ubuntu` 用户维护，Nginx 只读取静态文件。不要把私钥、密码、Token 写进仓库。
+线上目录由 `ubuntu` 用户维护，Nginx 只读取静态文件。不要把私钥、密码、Token 写进仓库。如果仓库以后改成私有，需要给服务器单独配置 deploy key 或访问令牌。
 
 ## 线上验证
 
