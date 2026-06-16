@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>定时任务调度器使用说明</title>
+    <link rel="icon" href="../public/images/scheduler-logo.png" />
+    <link rel="stylesheet" href="../src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="返回产品工具合集首页">
+        <img src="../public/images/scheduler-logo.png" alt="" />
+        <span>产品工具合集</span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="../index.html#products">产品</a>
+        <a href="#buttons">按钮说明</a>
+        <a href="#steps">使用步骤</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="detail-hero">
+        <div class="detail-copy">
+          <a class="back-link" href="../index.html#products">返回产品列表</a>
+          <p class="eyebrow">Automation Tool</p>
+          <h1>定时任务调度器</h1>
+          <p>
+            用图形界面管理本地脚本和自动化任务，适合定时采集、数据同步、定时报表、自动化运维等场景。
+          </p>
+          <div class="metric-row">
+            <div><strong>3 类</strong><span>触发方式</span></div>
+            <div><strong>本地</strong><span>脚本执行</span></div>
+            <div><strong>可查</strong><span>日志告警</span></div>
+          </div>
+        </div>
+        <figure class="detail-shot">
+          <img src="../public/images/scheduler-main.png" alt="定时任务调度器主界面" />
+        </figure>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Overview</p>
+          <h2>它解决什么问题</h2>
+          <p>
+            当客户需要定时运行脚本，但又不想写调度代码、配置服务器或记命令时，可以使用这个工具集中管理任务。
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <h3>任务集中管理</h3>
+            <p>在列表里查看任务名称、触发方式、状态、上次执行和下次执行时间。</p>
+          </article>
+          <article>
+            <h3>多种触发方式</h3>
+            <p>支持 Cron、固定间隔和指定时间，覆盖周期任务和一次性任务。</p>
+          </article>
+          <article>
+            <h3>运行日志可追踪</h3>
+            <p>执行过程会输出到日志面板，异常信息进入告警记录，方便排查。</p>
+          </article>
+          <article>
+            <h3>托盘常驻运行</h3>
+            <p>关闭主窗口后可隐藏到系统托盘，任务继续运行，不打断客户工作。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section image-explain">
+        <div>
+          <p class="eyebrow">Interface</p>
+          <h2>主界面分区</h2>
+          <p>上方是任务筛选和任务列表，下方是运行日志、告警记录和日志查询。</p>
+        </div>
+        <figure>
+          <img src="../public/images/scheduler-task-list.png" alt="任务列表区域截图" />
+          <figcaption>任务列表：用于查看任务状态和下一次执行时间。</figcaption>
+        </figure>
+        <figure>
+          <img src="../public/images/scheduler-log-panel.png" alt="运行日志区域截图" />
+          <figcaption>运行日志：用于查看任务输出、告警和历史记录。</figcaption>
+        </figure>
+      </section>
+
+      <section class="section button-guide" id="buttons">
+        <div class="section-heading">
+          <p class="eyebrow">Button Guide</p>
+          <h2>每个按钮的含义</h2>
+          <p>客户不需要猜按钮作用。下面按界面位置说明：什么时候点、点完会发生什么。</p>
+        </div>
+
+        <div class="guide-block">
+          <h3>主工具栏</h3>
+          <figure class="module-figure">
+            <img src="../public/images/scheduler-toolbar.png" alt="主工具栏按钮截图" />
+            <figcaption>主工具栏：新建任务、刷新、立即执行所有任务、停止调度器、激活设置。</figcaption>
+          </figure>
+          <div class="guide-table" role="table" aria-label="主工具栏按钮说明">
+            <div role="row">
+              <strong role="cell">新建任务</strong>
+              <span role="cell">打开任务配置窗口，用来新增脚本任务或内置任务。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">刷新</strong>
+              <span role="cell">重新读取任务列表、状态、上次执行时间和下次执行时间。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">立即执行所有任务</strong>
+              <span role="cell">立刻运行所有已启用任务；如果已有任务正在运行，按钮会变成“暂停所有任务”。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">停止调度器 / 启动调度器</strong>
+              <span role="cell">停止或恢复自动调度。停止后不会按计划触发任务，已保存的任务配置不会丢失。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">激活设置</strong>
+              <span role="cell">打开授权信息窗口，可复制机器码、输入激活码并完成软件激活。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">清空筛选</strong>
+              <span role="cell">清除任务名称关键字和启用状态筛选，恢复显示全部任务。</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="guide-block">
+          <h3>新建任务窗口</h3>
+          <figure class="module-figure module-figure-dialog">
+            <img src="../public/images/scheduler-new-task.png" alt="新建任务窗口截图" />
+            <figcaption>新建任务窗口：配置任务名称、触发方式、脚本文件、参数和运行方式。</figcaption>
+          </figure>
+          <div class="guide-table" role="table" aria-label="新建任务窗口按钮说明">
+            <div role="row">
+              <strong role="cell">手动触发</strong>
+              <span role="cell">任务不会按时间自动运行，适合只想保存配置、需要时手动执行的任务。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">计划触发</strong>
+              <span role="cell">按规则周期执行，可选择每分、每时、每天、每周、月份或高级 Cron。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">定时触发</strong>
+              <span role="cell">在指定日期和时间执行一次，适合一次性任务。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">每分 / 每时 / 每天 / 每周 / 月份 / 高级</strong>
+              <span role="cell">计划触发下的频率按钮。“高级”用于填写标准 5 段 Cron 表达式。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">运行目录-浏览</strong>
+              <span role="cell">选择脚本运行时所在目录。脚本依赖相对路径或本项目模块时，建议先选它。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">脚本文件-浏览</strong>
+              <span role="cell">选择要执行的 Python 脚本文件。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">确定</strong>
+              <span role="cell">保存任务配置。必填项缺失或规则不合法时，会提示修正。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">取消</strong>
+              <span role="cell">关闭窗口，不保存本次修改。</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="guide-block">
+          <h3>任务列表右键菜单</h3>
+          <figure class="module-figure module-figure-menu">
+            <img src="../public/images/scheduler-context-menu.png" alt="任务列表右键菜单截图" />
+            <figcaption>任务右键菜单：立即执行、编辑、复制、启用禁用和删除都在这里。</figcaption>
+          </figure>
+          <div class="guide-table" role="table" aria-label="任务右键菜单说明">
+            <div role="row">
+              <strong role="cell">立即执行</strong>
+              <span role="cell">不等下一次计划时间，马上执行当前任务一次。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">暂停任务</strong>
+              <span role="cell">当任务正在运行时显示，用于停止当前运行中的任务。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">编辑</strong>
+              <span role="cell">打开任务配置窗口，修改名称、触发方式、脚本路径、参数等。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">复制任务</strong>
+              <span role="cell">复制当前任务配置生成一个新任务，默认先禁用，避免复制后立刻自动执行。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">复制脚本路径</strong>
+              <span role="cell">把当前脚本任务的脚本路径复制到剪贴板。内置任务没有脚本路径。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">启用 / 禁用</strong>
+              <span role="cell">启用后按计划参与调度；禁用后保留配置但不自动运行。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">删除</strong>
+              <span role="cell">永久删除任务。软件会二次确认，删除后不可恢复。</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="guide-block">
+          <h3>运行日志和日志查询</h3>
+          <div class="module-gallery">
+            <figure class="module-figure">
+              <img src="../public/images/scheduler-log-panel.png" alt="运行日志面板截图" />
+              <figcaption>运行日志：查看实时输出、配置通知、清空和导出。</figcaption>
+            </figure>
+            <figure class="module-figure">
+              <img src="../public/images/scheduler-log-query.png" alt="日志查询面板截图" />
+              <figcaption>日志查询：按日期、状态、任务名和显示条数筛选历史记录。</figcaption>
+            </figure>
+          </div>
+          <div class="guide-table" role="table" aria-label="日志按钮说明">
+            <div role="row">
+              <strong role="cell">通知配置</strong>
+              <span role="cell">打开钉钉通知设置。任务失败时可向指定钉钉群发送告警。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">清空</strong>
+              <span role="cell">清空当前界面上的运行日志显示，不会删除已经保存的历史执行记录。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">导出</strong>
+              <span role="cell">把当前运行日志导出为 txt 文件，便于发给技术人员排查。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">显示命令行窗口</strong>
+              <span role="cell">勾选后脚本会弹出独立命令行窗口运行；不勾选时静默运行，输出显示在日志区。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">查询</strong>
+              <span role="cell">在“日志查询”页按日期、状态、任务名和条数筛选历史执行记录。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">清空筛选</strong>
+              <span role="cell">恢复日志查询默认条件：最近 7 天、全部状态、显示 100 条。</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="guide-block">
+          <h3>钉钉通知配置</h3>
+          <figure class="module-figure module-figure-dialog">
+            <img src="../public/images/scheduler-notification-config.png" alt="钉钉通知配置窗口截图" />
+            <figcaption>通知配置：填写钉钉 Webhook、通知关键词，并先用测试发送确认能收到消息。</figcaption>
+          </figure>
+          <div class="guide-table" role="table" aria-label="钉钉通知按钮说明">
+            <div role="row">
+              <strong role="cell">任务失败时发送通知</strong>
+              <span role="cell">开启后，任务执行失败会发送钉钉告警；关闭后只在软件内记录日志。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">复制关键词</strong>
+              <span role="cell">复制当前通知关键词，便于粘贴到钉钉群机器人的“自定义关键词”安全设置里。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">测试发送</strong>
+              <span role="cell">保存前先发一条测试消息。钉钉群收到消息，说明 Webhook 已接通。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">保存</strong>
+              <span role="cell">保存 Webhook、关键词和启用状态。启用通知前必须填写有效 Webhook。</span>
+            </div>
+            <div role="row">
+              <strong role="cell">取消</strong>
+              <span role="cell">关闭通知配置窗口，不保存本次修改。</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="steps">
+        <div class="section-heading">
+          <p class="eyebrow">How To Use</p>
+          <h2>基础使用步骤</h2>
+          <p>客户按下面顺序操作即可完成一个任务配置。</p>
+        </div>
+        <ol class="step-list">
+          <li>
+            <strong>新建任务</strong>
+            <span>点击主界面左上角“新建任务”，填写任务名称和说明。</span>
+          </li>
+          <li>
+            <strong>选择触发方式</strong>
+            <span>按需求选择 Cron、固定间隔或指定时间。周期任务通常使用 Cron 或固定间隔。</span>
+          </li>
+          <li>
+            <strong>选择执行内容</strong>
+            <span>可以选择内置任务，也可以选择本地 Python 脚本。脚本任务可配置运行目录。</span>
+          </li>
+          <li>
+            <strong>保存并启用</strong>
+            <span>保存后任务会出现在任务列表里，启用状态下会按规则自动执行。</span>
+          </li>
+          <li>
+            <strong>查看日志</strong>
+            <span>执行后在运行日志中查看输出；如果失败，到告警记录里查看错误摘要。</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section split-section">
+        <div>
+          <p class="eyebrow">For Customers</p>
+          <h2>适合客户使用的场景</h2>
+          <p>这个工具适合交付给需要“定时跑任务，但不想折腾服务器和命令行”的客户。</p>
+        </div>
+        <div class="scenario-list">
+          <div>
+            <strong>数据同步</strong>
+            <span>每天或每小时同步指定数据。</span>
+          </div>
+          <div>
+            <strong>定时报表</strong>
+            <span>按固定时间生成文件或更新数据。</span>
+          </div>
+          <div>
+            <strong>采集任务</strong>
+            <span>定时执行已有采集脚本并保留日志。</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>常见问题</h2>
+        </div>
+        <details>
+          <summary>关闭窗口后任务还会继续执行吗？</summary>
+          <p>会。程序支持隐藏到系统托盘，主窗口关闭后任务仍可继续运行。</p>
+        </details>
+        <details>
+          <summary>外部脚本需要和调度器使用同一个 Python 环境吗？</summary>
+          <p>不强制。工具会优先使用脚本项目自己的虚拟环境，其次使用电脑上的公共 Python。</p>
+        </details>
+        <details>
+          <summary>任务配置会不会重启后丢失？</summary>
+          <p>不会。任务配置使用本地 SQLite 保存，重启后会恢复已启用任务。</p>
+        </details>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>定时任务调度器</span>
+      <span class="site-footer-links">
+        <a href="../index.html#products">返回产品合集</a>
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">浙ICP备2023041540号-3</a>
+      </span>
+    </footer>
+  </body>
+</html>

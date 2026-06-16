@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>产品工具合集</title>
+    <link rel="icon" href="public/images/scheduler-logo.png" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="产品工具合集首页">
+        <img src="public/images/scheduler-logo.png" alt="" />
+        <span>产品工具合集</span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#products">产品</a>
+        <a href="#scenarios">场景</a>
+        <a href="#updates">扩展</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-band">
+        <div class="hero-copy">
+          <p class="eyebrow">客户工具中心</p>
+          <h1>把常用小产品集中展示，说明和入口都放清楚。</h1>
+          <p class="hero-text">
+            这里不是单一产品宣传页，而是面向客户的产品合集入口。每个工具都有独立说明页，后续新增产品时可以直接扩展。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#products">查看产品</a>
+            <a class="button secondary" href="products/scheduler.html">查看使用说明</a>
+          </div>
+        </div>
+        <figure class="hero-visual">
+          <img src="public/images/scheduler-main.png" alt="定时任务调度器主界面截图" />
+          <figcaption>当前已接入：定时任务调度器</figcaption>
+        </figure>
+      </section>
+
+      <section class="section" id="products">
+        <div class="section-heading">
+          <p class="eyebrow">Products</p>
+          <h2>产品列表</h2>
+          <p>按客户能理解的用途来组织产品。点击产品卡片可进入独立使用说明。</p>
+        </div>
+
+        <div class="filter-row" aria-label="产品分类筛选">
+          <button class="filter-chip is-active" type="button" data-filter="all">全部</button>
+          <button class="filter-chip" type="button" data-filter="automation">自动化</button>
+          <button class="filter-chip" type="button" data-filter="data">数据处理</button>
+          <button class="filter-chip" type="button" data-filter="coming">规划中</button>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card" data-category="automation data">
+            <div class="product-card-top">
+              <img src="public/images/scheduler-logo.png" alt="" />
+              <span class="status ready">已接入</span>
+            </div>
+            <h3>定时任务调度器</h3>
+            <p>本地管理 Python 脚本和自动化任务，适合定时采集、数据同步、报表生成和运维作业。</p>
+            <div class="tag-row">
+              <span>Cron</span>
+              <span>脚本执行</span>
+              <span>运行日志</span>
+            </div>
+            <a class="text-link" href="products/scheduler.html">查看使用说明</a>
+          </article>
+
+          <article class="product-card muted" data-category="coming">
+            <div class="product-card-top">
+              <div class="placeholder-icon">A</div>
+              <span class="status planned">规划中</span>
+            </div>
+            <h3>自动化采集助手</h3>
+            <p>用于承接后续采集类小产品，可展示采集入口、配置说明、运行结果和交付注意事项。</p>
+            <div class="tag-row">
+              <span>采集</span>
+              <span>配置</span>
+              <span>导出</span>
+            </div>
+            <span class="text-link disabled">待接入</span>
+          </article>
+
+          <article class="product-card muted" data-category="coming data">
+            <div class="product-card-top">
+              <div class="placeholder-icon accent">D</div>
+              <span class="status planned">规划中</span>
+            </div>
+            <h3>数据整理工具</h3>
+            <p>用于后续放置表格清洗、字段转换、数据校验等轻量工具，客户可按说明独立使用。</p>
+            <div class="tag-row">
+              <span>清洗</span>
+              <span>校验</span>
+              <span>转换</span>
+            </div>
+            <span class="text-link disabled">待接入</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-section" id="scenarios">
+        <div>
+          <p class="eyebrow">Scenarios</p>
+          <h2>适合放在这里的产品</h2>
+          <p>
+            官网主要承载“客户看得懂、能按图使用”的工具说明。每个产品都要尽量讲清入口、配置、执行、结果和异常处理。
+          </p>
+        </div>
+        <div class="scenario-list">
+          <div>
+            <strong>自动化任务</strong>
+            <span>定时执行、脚本调度、批量处理。</span>
+          </div>
+          <div>
+            <strong>数据工具</strong>
+            <span>采集、清洗、导出、校验。</span>
+          </div>
+          <div>
+            <strong>客户交付</strong>
+            <span>带截图的使用说明和常见问题。</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section update-band" id="updates">
+        <div>
+          <p class="eyebrow">Expansion</p>
+          <h2>后续新增产品，按同一模板扩展。</h2>
+          <p>新增一个小产品时，只需要补产品截图、首页卡片和独立说明页，客户入口保持一致。</p>
+        </div>
+        <a class="button primary" href="products/scheduler.html">查看页面模板</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>产品工具合集</span>
+      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">浙ICP备2023041540号-3</a>
+    </footer>
+
+    <script src="src/main.js"></script>
+  </body>
+</html>
